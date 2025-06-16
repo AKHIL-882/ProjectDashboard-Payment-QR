@@ -1,133 +1,101 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // Close modal if clicked outside the image container
-  const handleOutsideClick = (e) => {
-    if (e.target.id === "modalOverlay") {
-      setIsModalOpen(false);
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
-      <h1 className="text-3xl font-bold mb-4 text-center">BTechCareerGuide</h1>
-
-      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md text-center">
-        <h2 className="text-xl font-semibold mb-2">Project: FitFeo</h2>
-        <p className="text-gray-600 mb-2">
-          Web Developer Assignment:{" "}
-          <strong>Healthcare Dashboard (React - Static Display)</strong>
-        </p>
-
-        {/* Pricing */}
-        <div className="mb-2">
-          <span className="text-red-500 line-through text-lg mr-2">
-            Rs. 1500
+    <div style={styles.container}>
+      <div style={styles.card}>
+        <h1 style={styles.heading}>Full Name: <span style={styles.highlight}>Akhil Duggirala</span></h1>
+        <h1 style={styles.heading}>Employee ID: <span style={styles.highlight}>SS214</span></h1>
+        <h1 style={styles.heading}>
+          Relationship to the Referrer:
+          <br />
+          <span style={styles.subText}>
+            Select any of them – It doesn't matter. I suggest selecting{' '}
+            <strong style={styles.friend}>‘Friend’ 🛡️</strong> and submitting the form.
           </span>
-          <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
-            Offer: Rs. 1000/-
-          </span>
-        </div>
+        </h1>
 
-        {/* Demo Button */}
-        <div className="mb-4 mt-2">
-          <a
-            href="https://healthcare-pink-ten.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-          >
-            🔍 View Demo
+        {/* Social Icons */}
+        <div style={styles.socialIcons}>
+          <a href="https://www.instagram.com/btechcareerguide/" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+            <FaInstagram style={{ color: "#E4405F" }} />
+          </a>
+          <a href="https://www.linkedin.com/in/duggirala-akhil-151768187/" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+            <FaLinkedin style={{ color: "#0e76a8" }} />
+          </a>
+          <a href="https://www.youtube.com/@btechcareerguide" target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+            <FaYoutube style={{ color: "#FF0000" }} />
           </a>
         </div>
 
-        {/* QR Image Preview */}
-        <div
-          className="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden cursor-pointer mb-4"
-          onClick={() => setIsModalOpen(true)}
-        >
-          <img
-            src="/payment_qr.jpg"
-            alt="Payment QR"
-            className="object-contain h-full"
-          />
-        </div>
+        {/* Counter */}
+        <div id="sfcwj52dg58wett1176jbj92w1xh21p9dj2" />
 
-        <p className="text-sm text-gray-700">
-          Once done with the payment, ping me on Instagram or LinkedIn with your
-          GitHub email address to get access to the code.
-        </p>
-
-        {/* Social Media Links */}
-        <div className="flex justify-center space-x-6 mt-4 text-2xl">
-          <a
-            href="https://www.instagram.com/btechcareerguide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pink-500 hover:text-pink-700"
-            title="Instagram"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/duggirala-akhil-151768187/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
-            title="LinkedIn"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://www.youtube.com/@btechcareerguide"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
-            title="LinkedIn"
-            color="red"
-          >
-            <FaYoutube className="text-red-600 hover:text-red-800" />
-          </a>
-        </div>
-
-        {/* Disclaimer */}
-        <p className="text-xs text-gray-500 mt-6">
-          Disclaimer: Purchasing this project does not guarantee selection to
-          the next round. You may need to review and modify the code as per your
-          specific requirements to meet desired outcomes.
-        </p>
-      </div>
-
-      {/* Modal for Enlarged QR */}
-      {isModalOpen && (
-        <div
-          id="modalOverlay"
-          className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center"
-          onClick={handleOutsideClick}
-        >
-          <div className="bg-white p-4 rounded-lg max-w-xl max-h-[90vh] overflow-auto relative">
-            {/* Close Button */}
-            <button
-              className="absolute top-2 right-2 text-gray-600 hover:text-black text-2xl"
-              onClick={() => setIsModalOpen(false)}
-            >
-              &times;
-            </button>
-
-            {/* Enlarged Image */}
+        {/* Fallback for JS-disabled users */}
+        <noscript>
+          <a href="https://www.freecounterstat.com" title="website counter">
             <img
-              src="/payment_qr.jpg"
-              alt="Full Payment QR"
-              className="w-full h-auto object-contain"
+              src="https://counter1.optistats.ovh/private/freecounterstat.php?c=wj52dg58wett1176jbj92w1xh21p9dj2"
+              border="0"
+              title="website counter"
+              alt="website counter"
+              style={{ marginTop: "20px" }}
             />
-          </div>
-        </div>
-      )}
+          </a>
+        </noscript>
+      </div>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+    background: "#f4f6f8",
+    padding: "20px",
+  },
+  card: {
+    background: "#ffffff",
+    padding: "40px",
+    borderRadius: "15px",
+    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+    maxWidth: "700px",
+    width: "100%",
+    textAlign: "center",
+  },
+  heading: {
+    fontSize: "1.5rem",
+    marginBottom: "15px",
+    color: "#333",
+  },
+  highlight: {
+    color: "#007acc",
+  },
+  subText: {
+    display: "block",
+    fontSize: "1rem",
+    marginTop: "10px",
+    color: "#555",
+  },
+  friend: {
+    color: "#28a745",
+  },
+  socialIcons: {
+    fontSize: "2rem",
+    marginTop: "30px",
+    marginBottom: "20px",
+    display: "flex",
+    justifyContent: "center",
+    gap: "40px",
+  },
+  iconLink: {
+    transition: "transform 0.2s",
+  },
+};
 
 export default App;
