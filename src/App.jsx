@@ -5,15 +5,9 @@ function App() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h1 style={styles.heading}>Full Name: <span style={styles.highlight}>Akhil Duggirala</span></h1>
-        <h1 style={styles.heading}>Employee ID: <span style={styles.highlight}>SS214</span></h1>
+        <h1 style={styles.heading}>Full Name: <span style={styles.highlight}>Helloo!!!!</span></h1>
         <h1 style={styles.heading}>
-          Relationship to the Referrer:
-          <br />
-          <span style={styles.subText}>
-            Select any of them – It doesn't matter. I suggest selecting{' '}
-            <strong style={styles.friend}>‘Friend’ 🛡️</strong> and submitting the form.
-          </span>
+         Done with the Registrations!!! 
         </h1>
 
         {/* Social Icons */}
